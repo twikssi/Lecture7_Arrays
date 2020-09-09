@@ -70,4 +70,15 @@ public class ArrayServiceTest {
 
         assertEquals(expected,actual,0.00999999);
     }
+
+    @Test
+    public void sortReturnTrue() {
+        int[] intAr = new int[]{34,3,2,0,5,6,7,1,1,1};
+        ArrayService.sort(intAr);
+
+        boolean expected = true;
+        boolean actual = (intAr[0] == 0 && intAr[9] == 34);
+
+        assertEquals(expected,actual);
+    }
 }

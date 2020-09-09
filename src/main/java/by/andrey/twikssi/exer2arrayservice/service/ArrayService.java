@@ -4,7 +4,7 @@ import by.andrey.twikssi.exer1jobwitharrays.service.LookupArrayService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.concurrent.ThreadLocalRandom;
+import java.util.Arrays;
 
 public class ArrayService {
     public static final Logger logger = LoggerFactory.getLogger(ArrayService.class);
@@ -51,5 +51,9 @@ public class ArrayService {
             return (double) sum / array.length;
         }
         return (double) sum;
+    }
+
+    public static void sort(int[] array){
+        Arrays.sort(array);
     }
 }
