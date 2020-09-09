@@ -31,15 +31,9 @@ public class ArrayServiceTest {
     }
 
     @Test
-    public void printArray() {
-        int[] intAr2 = new int[]{34,3,2,0,5,6,7};
-        ArrayService.printArray(intAr2);
-    }
-
-
-    @Test
     public void sum() {
         int[] intAr = new int[]{34,3,2,0,5,6,7};
+        ArrayService.printArray(intAr);
 
         int expected = 57;
         int actual = ArrayService.sum(intAr);

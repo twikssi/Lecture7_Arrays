@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ArrayService {
-    public static Logger logger = LoggerFactory.getLogger(ArrayService.class);
+    public static final Logger logger = LoggerFactory.getLogger(ArrayService.class);
 
     private ArrayService() {
     }
