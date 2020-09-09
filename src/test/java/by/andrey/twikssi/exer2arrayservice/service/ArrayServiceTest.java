@@ -28,4 +28,13 @@ public class ArrayServiceTest {
 
         assertEquals(expected,actual);
     }
+
+    @Test
+    public void printArray() {
+        int[] intAr2 = new int[]{34,3,2,0,5,6,7};
+
+        ArrayService.printArray(intAr2);
+    }
+
+
 }
