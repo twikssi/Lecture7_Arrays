@@ -42,4 +42,12 @@ public class LookupArrayServiceTest extends TestCase {
 
             assertEquals(expected,actual);
     }
+
+    public void testFindIndexOfMax() {
+        this.intArr = new int[]{45, 3, 6, 22, -49, 9, 34, 5, 1, 2, 0, 50, 80,45,4,0,8};
+        int expected = 12;
+        int actual = LookupArrayService.findIndexOfMax(intArr);
+
+        assertEquals(expected,actual);
+    }
 }
