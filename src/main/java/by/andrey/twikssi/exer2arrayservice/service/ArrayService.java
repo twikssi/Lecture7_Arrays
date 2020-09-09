@@ -56,4 +56,13 @@ public class ArrayService {
     public static void sort(int[] array){
         Arrays.sort(array);
     }
+
+
+    public static void swap(int[] array){
+        for (int i = 0; i <  (array.length/2); i++) {
+            int reserveNumber = array[i];
+            array[i] = array[array.length - (i+1)];
+            array[array.length - (i+1)] = reserveNumber;
+        }
+    }
 }

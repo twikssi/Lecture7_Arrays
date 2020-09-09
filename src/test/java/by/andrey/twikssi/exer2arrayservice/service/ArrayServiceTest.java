@@ -76,9 +76,49 @@ public class ArrayServiceTest {
         int[] intAr = new int[]{34,3,2,0,5,6,7,1,1,1};
         ArrayService.sort(intAr);
 
+
         boolean expected = true;
         boolean actual = (intAr[0] == 0 && intAr[9] == 34);
 
         assertEquals(expected,actual);
+    }
+
+    @Test
+    public void swapWithFive() {
+        int[] intAr = new int[]{34,3,2,0,5};
+        int[] intAr2 = new int[]{5,0,2,3,34};
+        ArrayService.swap(intAr);
+
+
+        int[] expected = intAr2;
+        int[] actual = intAr;
+
+        assertArrayEquals(expected,actual);
+    }
+
+    @Test
+    public void swapWithSix() {
+        int[] intAr = new int[]{34,3,2,0,5,6};
+        int[] intAr2 = new int[]{6,5,0,2,3,34};
+        ArrayService.swap(intAr);
+
+
+        int[] expected = intAr2;
+        int[] actual = intAr;
+
+        assertArrayEquals(expected,actual);
+    }
+
+    @Test
+    public void swapWithTwo() {
+        int[] intAr = new int[]{34};
+        int[] intAr2 = new int[]{34};
+        ArrayService.swap(intAr);
+
+
+        int[] expected = intAr2;
+        int[] actual = intAr;
+
+        assertArrayEquals(expected,actual);
     }
 }
