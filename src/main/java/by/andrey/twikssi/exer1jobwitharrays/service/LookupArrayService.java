@@ -12,4 +12,13 @@ public class LookupArrayService {
             return array[array.length - 1];
         }
     }
+
+    public static int findMin(int[] array){
+        if(array == null || array.length == 0){
+            return 0;
+        } else{
+            Arrays.sort(array);
+            return array[0];
+        }
+    }
 }

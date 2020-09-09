@@ -34,4 +34,12 @@ public class LookupArrayServiceTest extends TestCase {
     }
 
 
+    @Test
+    public void testFindMin() {
+            this.intArr = new int[]{45, 3, 6, 22, 49, 9, 34, 5, 1, 6, 0, -50, 80};
+            int expected = -50;
+            int actual = LookupArrayService.findMin(intArr);
+
+            assertEquals(expected,actual);
+    }
 }
