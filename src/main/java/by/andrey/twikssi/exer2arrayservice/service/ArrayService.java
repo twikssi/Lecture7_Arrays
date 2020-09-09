@@ -40,4 +40,16 @@ public class ArrayService {
         }
         return sum;
     }
+
+    public static double avg(int[] array){
+        int sum = 0;
+        if (LookupArrayService.checkArrayForNullAndNoArgs(array)) {
+            for (int value : array
+            ) {
+                sum = sum + value;
+            }
+            return (double) sum / array.length;
+        }
+        return (double) sum;
+    }
 }

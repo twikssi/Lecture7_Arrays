@@ -56,4 +56,24 @@ public class ArrayServiceTest {
 
         assertEquals(expected,actual);
     }
+
+    @Test
+    public void avg() {
+        int[] intAr = new int[]{34,3,2,0,5,6,7};
+
+        double expected = 8.142;
+        double actual = ArrayService.avg(intAr);
+
+        assertEquals(expected,actual,0.00999999);
+    }
+
+    @Test
+    public void avgReturnWholeNumber() {
+        int[] intAr = new int[]{34,3,2,0,5,6,7,1,1,1};
+
+        double expected = 6.0;
+        double actual = ArrayService.avg(intAr);
+
+        assertEquals(expected,actual,0.00999999);
+    }
 }
