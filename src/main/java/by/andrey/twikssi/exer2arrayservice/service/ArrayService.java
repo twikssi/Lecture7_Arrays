@@ -1,5 +1,6 @@
 package by.andrey.twikssi.exer2arrayservice.service;
 
+import by.andrey.twikssi.exer1jobwitharrays.service.LookupArrayService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,5 +27,17 @@ public class ArrayService {
             String arrayText = "Index array = " + i + " Value = " + array[i];
             logger.info(arrayText);
         }
+    }
+
+    public  static int sum(int[] array) {
+        int sum = 0;
+        if (LookupArrayService.checkArrayForNullAndNoArgs(array)) {
+            for (int value : array
+            ) {
+                sum = sum + value;
+            }
+            return sum;
+        }
+        return sum;
     }
 }

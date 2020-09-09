@@ -1,5 +1,6 @@
 package by.andrey.twikssi.exer2arrayservice.service;
 
+import by.andrey.twikssi.exer1jobwitharrays.service.LookupArrayService;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -32,9 +33,27 @@ public class ArrayServiceTest {
     @Test
     public void printArray() {
         int[] intAr2 = new int[]{34,3,2,0,5,6,7};
-
         ArrayService.printArray(intAr2);
     }
 
 
+    @Test
+    public void sum() {
+        int[] intAr = new int[]{34,3,2,0,5,6,7};
+
+        int expected = 57;
+        int actual = ArrayService.sum(intAr);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void sumReturnZero() {
+        int[] intAr = new int[0];
+
+        int expected = 0;
+        int actual = ArrayService.sum(intAr);
+
+        assertEquals(expected,actual);
+    }
 }
