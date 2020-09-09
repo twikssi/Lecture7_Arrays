@@ -18,7 +18,7 @@ public class ArrayService {
 
     public static void fillRandomly(int[] array){
         for (int i = 0; i < array.length; i++) {
-            array[i] = ThreadLocalRandom.current().nextInt(0,100);
+            array[i] = 34 + i;
         }
     }
 
