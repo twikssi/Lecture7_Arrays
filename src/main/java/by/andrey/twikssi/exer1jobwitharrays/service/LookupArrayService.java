@@ -4,12 +4,16 @@ import java.util.Arrays;
 
 public class LookupArrayService {
 
+    private LookupArrayService() {
+    }
+
     public static boolean checkArrayForNullAndNoArgs(int[] array){
+        boolean statement = true;
         if(array == null || array.length == 0){
-            return false;
-        } else{
-           return true;
+            statement = false;
+            return statement;
         }
+        return statement;
     }
 
     public static int findMax(int[] array){
