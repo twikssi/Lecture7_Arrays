@@ -6,7 +6,7 @@ public class Palindrom {
     }
 
     public static String getStringWithoutTrumAndDocksAndSpace(String text){
-        return text.
+        String editText = text.
                 trim().
                 replaceAll(",","").
                 replaceAll(" ","").
@@ -15,6 +15,7 @@ public class Palindrom {
                 replaceAll("\\.","").
                 replaceAll("\\?","").
                 toLowerCase();
+        return editText;
     }
 
     public static boolean isPalindrome(String text){
@@ -24,10 +25,11 @@ public class Palindrom {
         for (int i = arrayString.length - 1; i >= 0; i--){
             reverseText += arrayString[i];
         }
+        boolean isPal = false;
         if (reverseText.equals(inputText)){
-            return true;
+            isPal = true;
         }
-        return false;
+        return isPal;
     }
 
 }
