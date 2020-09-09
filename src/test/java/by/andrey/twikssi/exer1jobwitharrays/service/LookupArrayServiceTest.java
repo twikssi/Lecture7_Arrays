@@ -43,10 +43,51 @@ public class LookupArrayServiceTest extends TestCase {
             assertEquals(expected,actual);
     }
 
+
     public void testFindIndexOfMax() {
         this.intArr = new int[]{45, 3, 6, 22, -49, 9, 34, 5, 1, 2, 0, 50, 80,45,4,0,8};
         int expected = 12;
         int actual = LookupArrayService.findIndexOfMax(intArr);
+
+        assertEquals(expected,actual);
+    }
+
+    public void testFindIndexOfMaxReturnNegative(){
+        this.intArr = new int[0];
+        int expected = -1;
+        int actual = LookupArrayService.findIndexOfMax(intArr);
+
+        assertEquals(expected,actual);
+    }
+
+    public void testFindIndexOfMin() {
+        this.intArr = new int[]{45, 3, 6, 22, -49, 9, 34, 5, 1, 2, 0, 50, 80,45,4,0,8};
+        int expected = 4;
+        int actual = LookupArrayService.findIndexOfMin(intArr);
+
+        assertEquals(expected,actual);
+    }
+
+    public void testFindIndexOfMinReturnNegative(){
+        this.intArr = new int[0];
+        int expected = -1;
+        int actual = LookupArrayService.findIndexOfMax(intArr);
+
+        assertEquals(expected,actual);
+    }
+
+    public void testFindIndexOf() {
+        this.intArr = new int[]{45, 3, 6, 22, -49, 9, 34, 5, 1, 2, 0, 50, 80,45,4,0,8};
+        int expected = 2;
+        int actual = LookupArrayService.findIndexOf(intArr,6);
+
+        assertEquals(expected,actual);
+    }
+
+    public void testFindIndexOfReturnNegative() {
+        this.intArr = new int[]{45, 3, 6, 22, -49, 9, 34, 5, 1, 2, 0, 50, 80,45,4,0,8};
+        int expected = -1;
+        int actual = LookupArrayService.findIndexOf(intArr,666);
 
         assertEquals(expected,actual);
     }

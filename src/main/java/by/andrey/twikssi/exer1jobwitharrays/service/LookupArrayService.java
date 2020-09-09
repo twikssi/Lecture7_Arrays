@@ -44,5 +44,32 @@ public class LookupArrayService {
         }
     }
 
+    public static int findIndexOfMin(int[] array){
+        if (checkArrayForNullAndNoArgs(array)){
+            int maxIndex = 0;
+            for (int i = 0; i < array.length; i++){
+                if (array[maxIndex] > array[i]){
+                    maxIndex = i;
+                }
+            }
+            return maxIndex;
+        } else {
+            return -1;
+        }
+    }
+
+    public static int findIndexOf(int[] array, int value){
+        if (checkArrayForNullAndNoArgs(array)){
+            for (int i = 0; i < array.length; i++){
+                if (array[i] == value){
+                   return i;
+                }
+            }
+            return -1;
+        } else {
+            return -1;
+        }
+    }
+
 
 }
