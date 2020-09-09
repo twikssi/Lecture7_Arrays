@@ -12,7 +12,7 @@ public class Palindrom {
                 replaceAll(" ","").
                 replaceAll("!","").
                 replaceAll("-","").
-                replaceAll(".","").
+                replaceAll("\\.","").
                 replaceAll("\\?","").
                 toLowerCase();
     }
