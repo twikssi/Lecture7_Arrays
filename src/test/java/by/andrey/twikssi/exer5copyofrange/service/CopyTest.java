@@ -29,4 +29,45 @@ public class CopyTest {
 
         assertArrayEquals(checkArray,arrraWithBounds);
     }
+
+    @Test
+    public void copyInRange() {
+        int[] checkArray = new int[]{4,5,2,7,8,9,0,3,1};
+
+        int[] expected = new int[]{7,8,9};
+        int[] actual = Copy.copyInRange(checkArray, 7,9);
+
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void copyInRangeWithRepeat() {
+        int[] checkArray = new int[]{4,5,2,7,8,8,8,9,7,9,0,3,1};
+
+        int[] expected = new int[]{7,7,8,8,8,9,9};
+        int[] actual = Copy.copyInRange(checkArray, 7,9);
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void copyInRangeWithOneElement() {
+        int[] checkArray = new int[]{7};
+
+        int[] expected = new int[]{7};
+        int[] actual = Copy.copyInRange(checkArray, 7,9);
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void copyInRangeWithNegative() {
+        int[] checkArray = new int[]{4,7,9,-7,-6,-8};
+
+        int[] expected = new int[]{-7,-6};
+        int[] actual = Copy.copyInRange(checkArray, -7,-4);
+
+        assertArrayEquals(expected, actual);
+    }
 }

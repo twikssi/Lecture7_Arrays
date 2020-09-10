@@ -1,5 +1,7 @@
 package by.andrey.twikssi.exer5copyofrange.service;
 
+import java.util.Arrays;
+
 public class Copy {
 
     public static int[] createdArrayWithBounds (int leftBound, int rightBound){
@@ -13,5 +15,19 @@ public class Copy {
             return arrayWithBound;
         }
         return new int[]{leftBound};
+    }
+
+    public static int[] copyInRange(int[] in, int leftBound, int rightBound){
+        int[] arrayWithBounds = createdArrayWithBounds(leftBound,rightBound);
+        int[] copyArrayWithBounds = new int[in.length];
+        int counter = 0;
+        for (int j = 0; j < arrayWithBounds.length ; j++)
+            for (int i = 0; i < in.length; i++){
+                if (in[i] == arrayWithBounds[j]){
+                    copyArrayWithBounds[counter] = in[i];
+                    counter++;
+                }
+            }
+        return Arrays.copyOfRange(copyArrayWithBounds,0,counter);
     }
 }
