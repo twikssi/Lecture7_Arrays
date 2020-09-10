@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class Copy {
 
+    private Copy() {
+    }
+
     public static int[] createdArrayWithBounds (int leftBound, int rightBound){
         if ((rightBound - leftBound) > 0){
             int sizeArray = rightBound - leftBound + 1;
